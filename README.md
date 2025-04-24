@@ -9,7 +9,9 @@
 
 ABU es un asistente virtual conversacional desarrollado con Python y Streamlit, pensado para brindar apoyo emocional, compañía, recordatorios y asistencia personalizada a personas adultas mayores, aunque su diseño empático e inclusivo permite que se adapte a cualquier tipo de usuario.
 
-![ABU Logo](IMG/LOGO.png)
+<p align="center">
+  <img src="IMG/LOGO.png" alt="ABU Logo" />
+</p>
 
 ---
 
