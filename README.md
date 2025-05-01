@@ -1,5 +1,5 @@
 # 🤖 ABU – Asistente de Bienestar Único 💜
-> Un asistente virtual empático que acompaña, recuerda y conecta a las personas con lo que más importa.
+> Un asistente virtual empático que acompaña, escucha y conecta.
 
 ![IA Generativa](https://img.shields.io/badge/IA%20Generativa-Integrada-%237235c9?style=for-the-badge&logo=openai&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
@@ -172,9 +172,12 @@ Si representás una empresa, entidad gubernamental, centro de salud o instituci�
 
 ---
 
-# Licencia Comercial de ABU
+# Licencia
 
-Esta licencia se aplica a todo uso de ABU en contextos comerciales, profesionales o institucionales.
+ABU se distribuye bajo un esquema de **licencia dual**:
+
+- ✅ Para **uso personal, educativo o no comercial**, se aplica la [Licencia MIT](LICENSE).
+- 💼 Para **uso comercial**, distribución con fines lucrativos o integración en productos propietarios, se requiere una [licencia comercial](LICENSE_COMERCIAL.md).
 
 ## 📌 Términos generales
 
