@@ -56,6 +56,59 @@ ABU combina múltiples tecnologías de IA para brindar una experiencia cálida y
 
 ---
 
+## 🎥 Demo en funcionamiento
+
+A continuación se muestra una vista general de cómo funciona ABU, desplegado con **Streamlit**. Podés ver el video completo en YouTube:
+
+🔗 [Ver demo en YouTube](https://www.youtube.com/watch?v=0SEG11lT_xk)
+
+---
+
+## 📸 Capturas del funcionamiento de ABU
+
+En las siguientes imágenes se puede observar cómo **ABU interactúa con un usuario ficticio**, en este caso "Rosita", acompañándola emocionalmente y ofreciendo recomendaciones para sentirse mejor. 
+
+> Las imágenes están ubicadas en la carpeta `IMG/`.
+
+### 📝 1. Formulario inicial
+![Formulario inicial](IMG/DIAPOSITIVA1.JPG)
+
+**ABU** solicita algunos datos del usuario para ofrecer una asistencia personalizada: nombre, edad, provincia de residencia, gustos, profesión, pasatiempos, entre otros.
+
+---
+
+### 💬 2. Menú principal y conversación empática
+![Conversación con Rosita](IMG/DIAPOSITIVA2.JPG)
+
+Desde el menú principal se accede a las funciones de **Conversar**, **Recordatorios**, **Noticias** y **Ayuda**. Aquí, Rosita recibe palabras de aliento y contención emocional de parte de ABU en un momento difícil.
+
+---
+
+### ⏰ 3. Sección de recordatorios
+![Recordatorios](IMG/DIAPOSTIVA3.JPG)
+
+ABU muestra recordatorios personalizados para Rosita, como llamar a sus hijos en determinados horarios o tomar su medicación.
+
+---
+
+### 🌦️ 4. Clima y noticias
+![Clima y noticias](IMG/DIAPOSITIVA4.JPG)
+
+Se informa el clima del día y el pronóstico para los próximos dos días. Además, ABU muestra los **titulares destacados** de noticias de actualidad.
+
+---
+
+### 🚨 5. Sección de ayuda / emergencia
+![Emergencia](IMG/DIAPOSITIVA5.JPG)
+
+ABU ofrece un botón de solicitud de ayuda en caso de emergencia. Al confirmarse, se envía una alerta con ubicación actual a un contacto de confianza o centro médico. También se muestra un mensaje reconfortante para calmar a la persona mientras espera ayuda.
+
+---
+
+📌 Estas funcionalidades están integradas en una interfaz clara, accesible y pensada para brindar asistencia cálida y efectiva.
+
+---
+
 ## 🌱 Escalabilidad y Metas Futuras
 
 - Telemedicina y agendado de turnos médicos automático.
