@@ -71,35 +71,35 @@ En las siguientes imágenes se puede observar cómo **ABU interactúa con un usu
 > Las imágenes están ubicadas en la carpeta `IMG/`.
 
 ### 📝 1. Formulario inicial
-![Formulario inicial](IMG/DIAPOSITIVA1.JPG)
+![Formulario inicial](IMG/Diapositiva1.JPG)
 
 **ABU** solicita algunos datos del usuario para ofrecer una asistencia personalizada: nombre, edad, provincia de residencia, gustos, profesión, pasatiempos, entre otros.
 
 ---
 
 ### 💬 2. Menú principal y conversación empática
-![Conversación con Rosita](IMG/DIAPOSITIVA2.JPG)
+![Conversación con Rosita](IMG/Diapositiva2.JPG)
 
 Desde el menú principal se accede a las funciones de **Conversar**, **Recordatorios**, **Noticias** y **Ayuda**. Aquí, Rosita recibe palabras de aliento y contención emocional de parte de ABU en un momento difícil.
 
 ---
 
 ### ⏰ 3. Sección de recordatorios
-![Recordatorios](IMG/DIAPOSTIVA3.JPG)
+![Recordatorios](IMG/Diapositiva3.JPG)
 
 ABU muestra recordatorios personalizados para Rosita, como llamar a sus hijos en determinados horarios o tomar su medicación.
 
 ---
 
-### 🌦️ 4. Clima y noticias
-![Clima y noticias](IMG/DIAPOSITIVA4.JPG)
+### 🌦️ 4. Noticias
+![Noticias](IMG/Diapositiva4.JPG)
 
 Se informa el clima del día y el pronóstico para los próximos dos días. Además, ABU muestra los **titulares destacados** de noticias de actualidad.
 
 ---
 
 ### 🚨 5. Sección de ayuda / emergencia
-![Emergencia](IMG/DIAPOSITIVA5.JPG)
+![Emergencia](IMG/Diapositiva5.JPG)
 
 ABU ofrece un botón de solicitud de ayuda en caso de emergencia. Al confirmarse, se envía una alerta con ubicación actual a un contacto de confianza o centro médico. También se muestra un mensaje reconfortante para calmar a la persona mientras espera ayuda.
 
