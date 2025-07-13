@@ -295,6 +295,12 @@ Centraliza todo lo necesario para guardar, estructurar o exportar información:
 
 ---
 
+## Documentación Técnica  
+Toda la documentación técnica del proyecto está disponible en la carpeta [`/docs`](docs/), organizada por secciones temáticas:  
+📄 [Ir al índice técnico](docs/index.md)
+
+---
+
 ## Sobre el Autor y el Proyecto
 
 ### 🧠 Identidad del proyecto  
@@ -308,9 +314,6 @@ El nombre, el logo y el diseño funcional de ABU están protegidos por derechos 
 Queda prohibida su reproducción, redistribución o comercialización sin autorización explícita del autor.  
 Para consultas, colaboraciones o licencias, podés escribir a: **xc.leiva@gmail.com**
 
-### 📚 Documentación Técnica  
-Toda la documentación técnica del proyecto está disponible en la carpeta [`/docs`](docs/), organizada por secciones temáticas:  
-📄 [Ir al índice técnico](docs/index.md)
 
 ### 👤 Contacto  
 **Autor:** Carlos Ezequiel Leiva  
