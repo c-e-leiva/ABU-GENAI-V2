@@ -33,7 +33,8 @@
 10. [Seguridad y privacidad](#🔒-seguridad-y-privacidad)  
 11. [Futuras mejoras y roadmap](#🚧-futuras-mejoras-y-roadmap)  
 12. [Ejemplos de conversación y datos](#💬-ejemplos-de-conversación-y-datos)  
-12. [Contacto](#👤-contacto)
+13. [Documentación Técnica](#📚-documentación-técnica)  
+14. [Sobre el Autor y el Proyecto](#👨‍💻-sobre-el-autor-y-el-proyecto)
 
 ---
 
@@ -130,6 +131,8 @@ ABU-GENAI-V2/
 │
 ├── .streamlit/                  Configuración de Streamlit (archivo no incluido)
 │   └── config.toml
+│
+├── docs/                        Documentación técnica (ver sección final para acceder)
 │
 └── venv/                        Entorno virtual (no incluido)
 ```
@@ -292,8 +295,24 @@ Centraliza todo lo necesario para guardar, estructurar o exportar información:
 
 ---
 
-## 👤 Contacto
+## 👨‍💻 Sobre el Autor y el Proyecto
 
+### 🧠 Identidad del proyecto  
+**ABU** es la sigla de *Asistente de Bienestar Único*.  
+El nombre, el concepto y el logo del asistente son originales y fueron creados por el autor del proyecto.  
+ABU está pensado como un puente humano entre tecnología y bienestar emocional, especialmente para personas mayores o con necesidades de acompañamiento.
+
+### ⚖️ Propiedad intelectual  
+Este proyecto fue desarrollado de forma independiente por **Carlos Ezequiel Leiva**.  
+El nombre, el logo y el diseño funcional de ABU están protegidos por derechos de autor.  
+Queda prohibida su reproducción, redistribución o comercialización sin autorización explícita del autor.  
+Para consultas, colaboraciones o licencias, podés escribir a: **xc.leiva@gmail.com**
+
+### 📚 Documentación Técnica  
+Toda la documentación técnica del proyecto está disponible en la carpeta [`/docs`](docs/), organizada por secciones temáticas:  
+📄 [Ir al índice técnico](docs/index.md)
+
+### 👤 Contacto  
 **Autor:** Carlos Ezequiel Leiva  
 📍 Buenos Aires, Argentina  
 🔗 [LinkedIn](https://www.linkedin.com/in/c-e-leiva)  
