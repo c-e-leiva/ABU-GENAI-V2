@@ -34,7 +34,7 @@
 11. [Futuras mejoras y roadmap](#🚧-futuras-mejoras-y-roadmap)  
 12. [Ejemplos de conversación y datos](#💬-ejemplos-de-conversación-y-datos)  
 13. [Documentación Técnica](#📚-documentación-técnica)  
-14. [Sobre el Autor y el Proyecto](#👨‍💻-sobre-el-autor-y-el-proyecto)
+14. [Sobre el Autor y el Proyecto](#sobre-el-autor-y-el-proyecto)
 
 ---
 
