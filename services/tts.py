@@ -28,7 +28,9 @@ def sintetizar_texto(texto, cliente):
         ssml_gender=texttospeech.SsmlVoiceGender.MALE,
     )
     audio_config = texttospeech.AudioConfig(
-        audio_encoding=texttospeech.AudioEncoding.MP3
+        audio_encoding=texttospeech.AudioEncoding.MP3,
+        pitch=2.5,
+        speaking_rate=0.98
     )
     respuesta = cliente.synthesize_speech(
         input=input_text, voice=voz, audio_config=audio_config
