@@ -1,0 +1,59 @@
+# ─────────────────────────────
+# Python cache / compilados
+# ─────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Entornos virtuales
+venv/
+env/
+ENV/
+.venv/
+
+# ─────────────────────────────
+# Archivos del sistema y editores
+# ─────────────────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ─────────────────────────────
+# Streamlit
+# ─────────────────────────────
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ─────────────────────────────
+# Variables de entorno
+# ─────────────────────────────
+.env
+
+# ─────────────────────────────
+# Logs
+# ─────────────────────────────
+*.log
+
+# ─────────────────────────────
+# Cache de testing
+# ─────────────────────────────
+.pytest_cache/
+
+# ─────────────────────────────
+# Checkpoints de Jupyter
+# ─────────────────────────────
+.ipynb_checkpoints/
+
+# ─────────────────────────────
+# Archivos temporales
+# ─────────────────────────────
+*.swp
+*.tmp
+*.bak
+
+# ─────────────────────────────
+# Credenciales sensibles (recomendación extra)
+# ─────────────────────────────
+credentials/*.json

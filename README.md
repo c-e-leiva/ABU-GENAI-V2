@@ -1,261 +1,294 @@
-# 🤖 ABU – Asistente de Bienestar Único 💜
-> Un asistente virtual empático que acompaña, escucha y conecta.
+# 🤖 ABU-GENAI-V2 – Asistente Conversacional con IA Generativa  
+> Evolución conversacional con GPT-4 Turbo, voz y acompañamiento emocional
 
-![IA Generativa](https://img.shields.io/badge/IA%20Generativa-Integrada-%237235c9?style=for-the-badge&logo=openai&logoColor=white)
+![GPT-4 Turbo](https://img.shields.io/badge/GPT--4-Turbo-%237235c9?style=for-the-badge&logo=openai&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-%23FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
-
-
-ABU es un asistente virtual conversacional desarrollado con Python y Streamlit, pensado para brindar apoyo emocional, compañía, recordatorios y asistencia personalizada a personas adultas mayores, aunque su diseño empático e inclusivo permite que se adapte a cualquier tipo de usuario.
-
 <p align="center">
-  <img src="IMG/LOGO.png" alt="ABU Logo" />
+  <img src="assets/img/logo.png" alt="ABU Logo" width="200"/>
 </p>
 
 ---
 
+---
 
-## 🚀 Visión del Proyecto
+## 📋 Índice
 
-**ABU nace desde la empatía, la tecnología y la vocación de ayudar.** Es una herramienta digital que busca mejorar la calidad de vida de sus usuarios a través del acompañamiento conversacional, la contención emocional y la asistencia diaria.
-
-La tecnología debe estar al servicio de las personas, y ABU representa ese puente entre lo humano y lo digital.
+1. [¿Qué es ABU?](#🧠-qué-es-abu)  
+2. [Novedades en la versión 2](#✨-novedades-en-la-versión-2)  
+3. [Funcionalidades principales](#⚙️-funcionalidades-principales)  
+4. [Objetivo](#🎯-objetivo)  
+5. [Estructura del Proyecto](#🧩-estructura-del-proyecto)  
+6. [Requisitos previos](#✅-requisitos-previos)  
+7. [Instalación y ejecución](#🚀-instalación-y-ejecución)  
+8. [Diagrama de Arquitectura](#🖼️-diagrama-de-arquitectura)  
+9. [Manejo de errores y logs](#⚠️-manejo-de-errores-y-logs)  
+10. [Seguridad y privacidad](#🔒-seguridad-y-privacidad)  
+11. [Futuras mejoras y roadmap](#🚧-futuras-mejoras-y-roadmap)  
+12. [Ejemplos de conversación y datos](#💬-ejemplos-de-conversación-y-datos)  
+12. [Contacto](#👤-contacto)
 
 ---
 
 ## 🧠 ¿Qué es ABU?
 
-ABU es un asistente virtual empático, que escucha con atención, conversa con calidez y acompaña con inteligencia. Gracias al uso de inteligencia artificial generativa, ABU es capaz de mantener conversaciones naturales y adaptadas a cada usuario, generando una experiencia más cercana, significativa y humana.
+**ABU** es un asistente virtual conversacional desarrollado en Python que utiliza **inteligencia artificial generativa (GPT-4 Turbo)** para brindar acompañamiento emocional, información útil, recordatorios y asistencia diaria.  
+Además, **incorpora LangChain** para mantener el contexto de la conversación y detectar situaciones críticas de forma dinámica.
+
+Está diseñado especialmente para adultos mayores, pero puede adaptarse a cualquier usuario. Ofrece un diálogo cálido, empático y personalizado, con soporte por voz y texto.
+
+---
+
+## ✨ Novedades en la versión 2
+
+- Migración a **GPT-4 Turbo** para mejor rendimiento y personalización.  
+- Integración con **Google Cloud Text-to-Speech** para respuestas en voz natural.  
+- Soporte para entrada por **voz** mediante Speech-to-Text.  
+- Reestructura modular para mayor mantenibilidad.  
+- Incorporación de **LangChain** para gestionar la memoria conversacional y detección de emergencias mediante flujos dinámicos.
+- Flujo conversacional adaptativo con detección de emociones.  
+- Comandos contextuales para clima, noticias y recordatorios.  
+- Botón para eliminar audios generados por cada mensaje.  
+- Preparado para escalar usando Google Sheets como almacenamiento inicial.
+
+---
+
+## ⚙️ Funcionalidades principales
+
+- **Conversación empática:** respuestas personalizadas según perfil y estado emocional.  
+- **Lectura por voz:** síntesis de voz para respuestas.  
+- **Entrada por voz:** permite hablar para interactuar con ABU.  
+- **Noticias y clima:** acceso a información actualizada según ubicación.  
+- **Recordatorios:** gestión personalizada de actividades y alertas.  
+- **Emergencia:** envía mensajes de ayuda con ubicación a contactos configurados.
 
 
 ---
 
-## 🧠 Componentes de Inteligencia Artificial
+## 🎯 Objetivo
 
-ABU combina múltiples tecnologías de IA para brindar una experiencia cálida y útil:
-
-| Componente                       | Descripción                                                                 |
-|----------------------------------|-----------------------------------------------------------------------------|
-| 💬 **IA Generativa (NLP)**       | Generación de respuestas naturales, personalizadas y empáticas.            |
-| 🗂️ **Procesamiento de Contexto** | Identificación de intenciones, estados de ánimo y temas relevantes.        |
-| 🔄 **Memoria de Sesión**         | Adaptación dinámica a las necesidades del usuario durante la conversación. |
-| 📡 **Integración con APIs**      | Acceso a datos en tiempo real como clima, noticias y recordatorios.        |
-
----
-
-## ⚙️ Funcionalidades actuales
-
-- 🗣️ Conversaciones empáticas adaptadas al perfil del usuario.
-- ⏰ Recordatorios para turnos médicos y rutinas diarias.
-- 📰 Presentación de noticias de forma clara y sencilla.
-- 🌤️ Información meteorológica local y consejos útiles.
-- 🆘 Envío automático de ubicación ante emergencias.
-- 💬 Acompañamiento emocional y compañía digital.
-- 👓 Interfaz accesible, legible y moderna.
-
----
-
-## 🎥 Demo en funcionamiento
-
-A continuación se muestra una vista general de cómo funciona ABU, desplegado con **Streamlit**. Podés ver el video completo en YouTube:
-
-🔗 [Ver demo en YouTube](https://www.youtube.com/watch?v=0SEG11lT_xk)
-
----
-
-## 📸 Capturas del funcionamiento de ABU
-
-En las siguientes imágenes se puede observar cómo **ABU interactúa con un usuario ficticio**, en este caso "Rosita", acompañándola emocionalmente y ofreciendo recomendaciones para sentirse mejor. 
-
-> Las imágenes están ubicadas en la carpeta `IMG/`.
-
-### 📝 1. Formulario inicial
-![Formulario inicial](IMG/Diapositiva1.JPG)
-
-**ABU** solicita algunos datos del usuario para ofrecer una asistencia personalizada: nombre, edad, provincia de residencia, gustos, profesión, pasatiempos, entre otros.
-
----
-
-### 💬 2. Menú principal y conversación empática
-![Conversación con Rosita](IMG/Diapositiva2.JPG)
-
-Desde el menú principal se accede a las funciones de **Conversar**, **Recordatorios**, **Noticias** y **Ayuda**. Aquí, Rosita recibe palabras de aliento y contención emocional de parte de ABU en un momento difícil.
-
----
-
-### ⏰ 3. Sección de recordatorios
-![Recordatorios](IMG/Diapositiva3.JPG)
-
-ABU muestra recordatorios personalizados para Rosita, como llamar a sus hijos en determinados horarios o tomar su medicación.
-
----
-
-### 🌦️ 4. Noticias
-![Noticias](IMG/Diapositiva4.JPG)
-
-Se informa el clima del día y el pronóstico para los próximos dos días. Además, ABU muestra los **titulares destacados** de noticias de actualidad.
-
----
-
-### 🚨 5. Sección de ayuda / emergencia
-![Emergencia](IMG/Diapositiva5.JPG)
-
-ABU ofrece un botón de solicitud de ayuda en caso de emergencia. Al confirmarse, se envía una alerta con ubicación actual a un contacto de confianza o centro médico. También se muestra un mensaje reconfortante para calmar a la persona mientras espera ayuda.
-
----
-
-📌 Estas funcionalidades están integradas en una interfaz clara, accesible y pensada para brindar asistencia cálida y efectiva.
-
-🔗 [Probar ABU en Streamlit](https://abu-ia-generativa.streamlit.app/)
+Mejorar la calidad de vida de los usuarios mediante un asistente virtual que escucha, conversa y acompaña. El proyecto acerca la inteligencia artificial a personas con necesidades reales, especialmente adultos mayores.
 
 
 ---
 
-## 🌱 Escalabilidad y Metas Futuras
-
-- Telemedicina y agendado de turnos médicos automático.
-- Educación digital y acompañamiento terapéutico.
-- Integración con servicios de emergencia.
-- Ampliación de habilidades mediante IA generativa.
-- Expansión de idioma y soporte multimedia (voz, imágenes).
-
----
-
-## 📂 Estructura del Proyecto
+## 🧩 Estructura del Proyecto
 
 ```
-abu/
+ABU-GENAI-V2/
 │
-├── app.py                 # App principal de Streamlit
-├── .env                  # Variables de entorno (API keys, configs)
-├── requirements.txt       # Dependencias
-├── IMG/                   # Carpeta de imágenes (íconos, logos)
-├── noticias/              # Módulo de noticias
-├── recordatorio/          # Módulo de recordatorios
-├── conversacion/          # Módulo de diálogo principal
-├── ayuda/                 # Módulo de ayuda
-└── README.md              # Este archivo :)
+├── .env                         Variables de entorno con claves API y configuraciones privadas (no incluido)
+├── .gitignore                   Lista de archivos y carpetas ignoradas por Git
+├── README.md                    Documentación principal del proyecto
+├── requirements.txt             Lista de dependencias necesarias para ejecutar la app
+├── app.py                       Archivo principal que lanza la aplicación Streamlit
+│
+├── data/                        Datos exportados, backups y archivos temporales
+│
+├── assets/                      Recursos estáticos (imágenes, íconos, audios)
+│   └── abu_logo.png             Logo del asistente ABU
+│
+├── credentials/                 Credenciales de servicios externos (no incluidas por seguridad)
+│   ├── gcp-tts-credentials.json      Claves para Text-to-Speech (Google Cloud).
+│   └── gcp-sheets-credentials.json   Claves para Google Sheets API.  
+│
+├── core/                        Lógica central del asistente
+│   ├── prompt_manager.py        Generación y control del flujo de prompts
+│   ├── openai_service.py        Integración con API de OpenAI
+│   ├── memoria.py               gestión de memoria conversacional del asistente usando LangChain
+│   └── detectar_emergencia.py   detectar situación de emergencia del usuario
+│
+├── features/                    Funcionalidades principales accesibles desde la interfaz
+│   ├── conversacion.py          Módulo de conversación con el asistente
+│   ├── noticias.py              Consulta del clima y noticias locales
+│   ├── recordatorio.py          Gestión de recordatorios Personales
+│   ├── emergencia.py            Gestión de contactos de emergencia
+│   └── configuracion.py         Configuración del perfil del usuario
+│
+├── services/                    Servicios externos de entrada y salida de voz
+│   ├── stt.py                   Conversión de voz a texto (Speech-to-Text)
+│   └── tts.py                   Conversión de texto a voz (Text-to-Speech)
+│
+├── storage/                     Almacenamiento y Exportación de Datos
+│   ├── resumen_historial.py     Genera resumen de la conversación para su exportación
+│   ├── perfil_usuario.py        Gestión del perfil del usuario
+│   └── exportar_sheets.py       Exporta el perfil completo y resumen a Google Sheets
+│
+├── users/                       Datos y lógica relacionados a los usuarios
+│   ├── estado_emocional.py      Análisis emocional del usuario
+│   └── perfiles_precargados.py  Perfiles de usuarios precargados (Rosa, Pedro, Juan).
+│
+├── access/                      Módulos relacionados al inicio de sesión
+│   └── login.py                 Interfaz y lógica para el acceso de usuarios.
+│
+├── .streamlit/                  Configuración de Streamlit (archivo no incluido)
+│   └── config.toml
+│
+└── venv/                        Entorno virtual (no incluido)
+```
+---
+
+
+## ✅ Requisitos previos
+
+- Python 3.10 o superior.  
+- Acceso a APIs: OpenAI GPT-4 Turbo, Google Cloud Text-to-Speech, Google Sheets, OpenWeather.  
+- Librerías indicadas en `requirements.txt`.
+
+---
+
+## 🚀 Instalación y ejecución
+
+1. Clonar el repositorio.  
+2. Crear y activar un entorno virtual Python.  
+3. Instalar dependencias con `pip install -r requirements.txt`.   
+4. Configurar las credenciales y variables de entorno:
+
+- Colocar los archivos JSON con credenciales de Google Cloud dentro de la carpeta `credentials/` (no incluidos en el repositorio):
+  - `gcp-tts-credentials.json` para Text-to-Speech  
+  - `gcp-sheets-credentials.json` para Google Sheets API  
+
+- Añadir las claves API necesarias en el archivo `.streamlit/config.toml` bajo la sección `[secrets]`, por ejemplo:
+
+```
+OPENAI_API_KEY="tu_api_key_aqui"
+OPENWEATHER_API_KEY="tu_api_key_aqui"
+NOTICIAS_API_KEY="tu_api_key_aqui"
+OTHER_API_KEY=...
 ```
 
----
-
-## ▶️ Despliegue
-
-ABU puede ejecutarse **de forma local** o ser **desplegado online** utilizando [Streamlit Cloud](https://streamlit.io/cloud).  
-A continuación, se detallan ambas opciones:
+5. Ejecutar la aplicación con Streamlit (`streamlit run app.py`).
 
 ---
 
-### 💻 Ejecución local
+## 🖼️ Diagrama de Arquitectura
 
-Ideal para desarrollo, pruebas o uso personal desde tu entorno:
+> Arquitectura funcional y modular del asistente ABU.
 
-1. Cloná el repositorio:
-
-```bash
-git clone https://github.com/tu_usuario/abu.git
-cd abu
-```
-
-2. Instalá las dependencias:
-
-```bash
-pip install -r requirements.txt
-```
-
-3. Configurá tus variables de entorno en un archivo `.env` ubicado en la raíz del proyecto.  
-Ejemplo:
-
-```
-API_CLIMA_KEY=tu_clave
-API_NOTICIAS_KEY=otra_clave
-```
-
-> ⚠️ El archivo `.env` **no debe subirse** al repositorio, por eso está incluido en el archivo `.gitignore`.
-
-4. Ejecutá la aplicación:
-
-```bash
-streamlit run app.py
-```
+![Arquitectura ABU](assets/img/arquitectura_ABU_v2.PNG)
 
 ---
 
-### ☁️ Despliegue en Streamlit Cloud
+### 🔍 Descripción de las capas
 
-ABU está listo para desplegarse fácilmente en la nube usando [Streamlit Cloud](https://streamlit.io/cloud):
+#### 🧍 USUARIO  
+El punto de inicio. El usuario final accede a la aplicación mediante un **navegador web**, utilizando la interfaz desarrollada en Streamlit.
 
-1. Subí el proyecto a un repositorio (público o privado) en GitHub.
-2. Ingresá a [Streamlit Cloud](https://streamlit.io/cloud) y conectá tu cuenta de GitHub.
-3. Seleccioná el repositorio que contiene ABU.
-4. En la sección de configuración, añadí las **Secrets** necesarias desde el panel "Secrets", en el siguiente formato:
+#### 🎨 INTERFAZ  
+Compuesta por `app.py`, `login.py` y `estado_emocional.py`, esta capa gestiona la experiencia de usuario: visualización, navegación, ingreso y configuración básica del estado emocional.  
+Es la puerta de entrada hacia el resto del sistema.
 
-```
-API_CLIMA_KEY="tu_clave"
-API_NOTICIAS_KEY="otra_clave"
-```
+#### 🛠 MÓDULOS  
+Son funcionalidades accesibles directamente desde la interfaz. Cada módulo es independiente y maneja una tarea específica:
+- `conversacion.py`: diálogo principal con el asistente.  
+- `recordatorio.py`: agenda personalizada.  
+- `noticias.py`: acceso a clima y noticias.  
+- `emergencia.py`: alertas a contactos definidos.  
+- `configuracion.py`: preferencias y ajustes del usuario.
 
-5. Hacé clic en **Deploy** y ¡listo! La aplicación estará corriendo online.
+#### 🧠 NÚCLEO  
+Aquí se orquesta el flujo conversacional, la lógica central del asistente y las funcionalidades más complejas.  
+Incluye:
+- `prompt_manager.py`: gestión de mensajes e instrucciones al modelo.
+- `openai_service.py`: conexión con la API de OpenAI.
+- `memoria.py`: memoria conversacional del usuario (implementada con **LangChain**).
+- `detectar_emergencia.py`: evalúa si una situación requiere activar protocolo de emergencia (usa **LangChain**).
 
-> 📌 En este caso, `app.py` ya está adaptado para leer las claves desde `st.secrets` en lugar del archivo `.env`.
+#### 🌐 SERVICIOS EXTERNOS  
+Integraciones que expanden las capacidades del asistente:
+- `tts.py` / `stt.py`: conversión de texto a voz y voz a texto.
+- **OpenAI GPT-4 / 3.5**: generación de respuestas naturales.
+- **Google Cloud TTS**: síntesis de voz.
+- **Google Sheets API**: almacenamiento inicial de datos estructurados.
+- **OpenWeather API**: clima en tiempo real.
+- **RSS Noticias**: acceso a noticias actuales.
+- `credentials/`: credenciales necesarias para autenticar los servicios.
+
+#### 🗄 ALMACENAMIENTO Y EXPORTACIÓN DE DATOS  
+Centraliza todo lo necesario para guardar, estructurar o exportar información:
+- `perfil_usuario.py`: consolida todos los datos del usuario.
+- `exportar_sheets.py`: envía los datos del perfil y conversación a Google Sheets.
+- `resumen_historial.py`: genera un resumen afectivo de la conversación para análisis o revisión posterior.
 
 
 ---
 
-## 🔐 Seguridad
+## ⚠️ Manejo de errores y logs
 
-Las credenciales sensibles como API Keys se manejan a través de un archivo `.env` y se recomienda agregar `.env` al archivo `.gitignore` para proteger la información confidencial al subirlo a GitHub.
-
----
-
-## 🙋 Sobre mí
-
-Mi nombre es **Carlos Ezequiel Leiva**, soy estudiante de Ciencia de Datos e Inteligencia Artificial y entusiasta de la tecnología con propósito social.
-
-📍 Vivo en Buenos Aires, Argentina.  
-📎 [Mi LinkedIn](https://www.linkedin.com/in/c-e-leiva)
+- El sistema captura errores comunes (fallas en conexión con APIs, errores en síntesis de voz, etc.) y muestra mensajes claros al usuario para mejorar la experiencia.  
 
 ---
 
-## 🤝 Colaboraciones
+## 🔒 Seguridad y privacidad
 
-¿Querés colaborar con el proyecto, dar feedback o explorar alianzas para escalar ABU?  
-¡Estoy completamente abierto a conversaciones, ideas o propuestas! 😊  
-Si representás una empresa, entidad gubernamental, centro de salud o institución interesada en implementar ABU, no dudes en contactarme.
-
-📩 **Correo:** xc.leiva@gmail.com
+- Las claves API y credenciales se almacenan localmente en archivos `.env` y `credentials/` que no se incluyen en el repositorio para proteger la información sensible.  
+- No se almacena información sensible del usuario de forma permanente sin consentimiento.  
 
 ---
 
-# Licencia
+## 🚧 Futuras mejoras y roadmap
 
-ABU se distribuye bajo un esquema de **licencia dual**:
+| Mejora                        | Descripción                                              |
+| ----------------------------- | -------------------------------------------------------- |
+| Persistencia en base de datos | Migrar almacenamiento a Firestore o PostgreSQL           |
+| Integración continua          | Automatizar pruebas y despliegues                        |
+| Interfaces móviles            | Desarrollar apps nativas o Progressive Web App           |
+| Accesibilidad mejorada        | Lectura automática, botones grandes, navegación sencilla |
+| Soporte multilingüe           | Añadir idiomas adicionales                               |
+| Seguimiento emocional         | Registro y análisis histórico de estados emocionales     |
 
-- ✅ Para **uso personal, educativo o no comercial**, se aplica la [Licencia MIT](LICENSE).
-- 💼 Para **uso comercial**, distribución con fines lucrativos o integración en productos propietarios, se requiere una [licencia comercial](LICENSE_COMERCIAL.md).
-
-## 📌 Términos generales
-
-- El uso de ABU con fines comerciales o en entornos institucionales (empresas, gobiernos, ONGs, centros de salud, etc.) requiere una **autorización expresa** del autor, Carlos Ezequiel Leiva.
-- No está permitido redistribuir, revender, integrar ni utilizar ABU como parte de un producto o servicio comercial sin esta autorización.
-- Cualquier uso no autorizado será considerado una infracción a los derechos de autor y podrá ser objeto de acciones legales conforme a la legislación vigente.
-
-## 🔑 Obtención de licencia
-
-Para obtener una licencia comercial, contactarse directamente con el autor a través de:
-
-📩 **Correo:** xc.leiva@gmail.com  
-
-Toda colaboración o acuerdo comercial será tratado de forma confidencial, y se definirá mediante un contrato personalizado entre las partes.
 
 ---
 
-**ABU © 2025** - Proyecto en desarrollo por **Carlos Ezequiel Leiva**. Todos los derechos reservados.
+## 💬 Ejemplos de conversación y datos
+
+**💬 Simulación de interacción:**  
+
+- **Usuario:** Hola Abu, ¿cómo estás hoy?  
+- **ABU:** ¡Hola! 😊 Qué lindo recibir tu mensaje. Estoy bien, gracias por preguntar. ¿Y vos, cómo estás hoy? Recordá que estoy acá para acompañarte siempre 💙  
+- **Usuario:** Estoy bien, gracias. ¿Podés contarme las noticias del día?  
+- **ABU:** Claro. Estas son algunas de las noticias principales de hoy:  
+  - El gobierno anunció nuevas medidas económicas para los próximos meses.  
+  - Avances importantes en investigaciones sobre energías renovables.  
+  - ¡Y buenas noticias! El equipo local ganó el campeonato nacional ⚽🎉  
+- **Usuario:** Qué bueno. ¿Y cómo está el clima en Buenos Aires?  
+- **ABU:** Hoy es viernes y son las 17:30 hs. En Buenos Aires está nublado, con una temperatura de aproximadamente 18°C.
+- **Usuario:** Abu, necesito ayuda urgente.  
+
+- *(Mensaje enviado al contacto de emergencia →)*  
+
+  **🚨 Hola, soy ABU, el asistente virtual de *Usuario*.**  
+  Está necesitando tu ayuda urgente y te tiene como contacto de emergencia.  
+  📍 Su Ubicación estimada es: *Ubicacion del Usuario*  
+
+- **ABU:** Ya envié un aviso a tu contacto de emergencia.  
+  Mantené la calma, tu contacto ya fue notificado y te ayudará lo antes posible.  
+  ¿Querés que reenvíe la alerta? ¿sí - no?  
+
+- **Usuario:** No, gracias Abu.  
+- **ABU:** Perfecto, salimos del modo de emergencia. Estoy acá si necesitás otra cosa. 💙
+
+
+**Perfil de usuario ejemplo:**
+
+| Nombre | Edad | Provincia | Estado Emocional | Vive Solo | Dificultades         | Preferencias                   |
+|--------|------|-----------|------------------|-----------|----------------------|--------------------------------|
+| Rosa   | 72   | Santa Fe  | Pensante         | Sí        | Memoria, Audición    | Noticias, Clima, Recordatorios |
+
+**Recordatorios ejemplo:**
+
+| Descripción           | Fecha       | Hora  |
+|-----------------------|-------------|-------|
+| Tomar la medicación   | 12/07/2025  | 08:00 |
+| Llamar a Claudia      | 13/07/2025  | 18:30 |
+
 
 ---
 
-💜 Gracias por interesarte en ABU.  
-Si llegaste hasta acá, ya estamos más cerca de construir tecnología con alma.
+## 👤 Contacto
 
-
+**Autor:** Carlos Ezequiel Leiva  
+📍 Buenos Aires, Argentina  
+🔗 [LinkedIn](https://www.linkedin.com/in/c-e-leiva)  
+📧 xc.leiva@gmail.com
