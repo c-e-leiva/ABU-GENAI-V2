@@ -5,15 +5,15 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from datetime import datetime
+from google.oauth2.service_account import Credentials
 import uuid
 
-# Definición del alcance de acceso para Google Sheets y archivo de credenciales
+# Definición del alcance de acceso para Google Sheets y credenciales
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
-CREDS_FILE = "credentials/abu-ia-5b23f8f17914.json"
 
 # Establece la conexión con Google Sheets usando las credenciales del proyecto
 def conectar_sheets():
-    creds = Credentials.from_service_account_file(CREDS_FILE, scopes=SCOPES)
+    creds = Credentials.from_service_account_file("gcp_sheets", scopes=SCOPES)
     client = gspread.authorize(creds)
     return client
 

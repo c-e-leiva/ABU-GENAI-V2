@@ -4,13 +4,16 @@
 
 import streamlit as st
 from google.cloud import texttospeech
+from google.oauth2 import service_account
 
-# Ruta al archivo JSON con tus credenciales
-RUTA_CREDENCIALES = "credentials/abu-ia-87da893baf83.json"
+
+credentials = service_account.Credentials.from_service_account_info(
+    dict(st.secrets["gcp_tts"])
+)
 
 # Crea un cliente autenticado para utilizar Google Text-to-Speech
 def crear_cliente_tts():
-    return texttospeech.TextToSpeechClient.from_service_account_file(RUTA_CREDENCIALES)
+    return texttospeech.TextToSpeechClient.from_service_account_file(credentials)
 
 # Convierte un texto en audio (formato MP3) utilizando la voz masculina en español de Argentina
 def sintetizar_texto(texto, cliente):
