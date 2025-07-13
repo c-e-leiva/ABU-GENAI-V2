@@ -5,6 +5,11 @@
 import streamlit as st
 from google.cloud import texttospeech
 from google.oauth2 import service_account
+import re
+
+# Elimina emojis y caracteres no verbales del texto antes de pasarlo a TTS
+def limpiar_texto_para_tts(texto):
+    return re.sub(r'[^\w\s.,!?¿¡:;áéíóúÁÉÍÓÚñÑ]', '', texto)
 
 
 credentials = service_account.Credentials.from_service_account_info(
@@ -48,12 +53,14 @@ def reproducir_audio_y_guardar():
 
     try:
         cliente = crear_cliente_tts()
-        audio_bytes = sintetizar_texto(ultimo_mensaje, cliente)
+        texto_limpio = limpiar_texto_para_tts(ultimo_mensaje)
+        audio_bytes = sintetizar_texto(texto_limpio, cliente)
         st.session_state["audio_abu"] = audio_bytes
         print("✅ Audio generado y guardado en session_state.")
     except Exception as e:
         st.error(f"Error al generar el audio: {e}")
         print("❌ Error en TTS:", e)
+
 
 # Muestra un botón para generar el audio del último mensaje del asistente
 def boton_reproducir():
