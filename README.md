@@ -21,24 +21,24 @@
 
 ## 📋 Índice
 
-1. [¿Qué es ABU?](#🧠-qué-es-abu)  
-2. [Novedades en la versión 2](#✨-novedades-en-la-versión-2)  
-3. [Funcionalidades principales](#⚙️-funcionalidades-principales)  
-4. [Objetivo](#🎯-objetivo)  
-5. [Estructura del Proyecto](#🧩-estructura-del-proyecto)  
-6. [Requisitos previos](#✅-requisitos-previos)  
-7. [Instalación y ejecución](#🚀-instalación-y-ejecución)  
-8. [Diagrama de Arquitectura](#🖼️-diagrama-de-arquitectura)  
-9. [Manejo de errores y logs](#⚠️-manejo-de-errores-y-logs)  
-10. [Seguridad y privacidad](#🔒-seguridad-y-privacidad)  
-11. [Futuras mejoras y roadmap](#🚧-futuras-mejoras-y-roadmap)  
-12. [Ejemplos de conversación y datos](#💬-ejemplos-de-conversación-y-datos)  
-13. [Documentación Técnica](#📚-documentación-técnica)  
+1. [¿Qué es ABU?](#qué-es-abu)  
+2. [Novedades en la versión 2](#novedades-en-la-versión-2)  
+3. [Funcionalidades principales](#funcionalidades-principales)  
+4. [Objetivo](#objetivo)  
+5. [Estructura del Proyecto](#estructura-del-proyecto)  
+6. [Requisitos previos](#requisitos-previos)  
+7. [Instalación y ejecución](#instalación-y-ejecución)  
+8. [Diagrama de Arquitectura](#diagrama-de-arquitectura)  
+9. [Manejo de errores y logs](#manejo-de-errores-y-logs)  
+10. [Seguridad y privacidad](#seguridad-y-privacidad)  
+11. [Futuras mejoras y roadmap](#futuras-mejoras-y-roadmap)  
+12. [Ejemplos de conversación y datos](#ejemplos-de-conversación-y-datos)  
+13. [Documentación Técnica](#documentación-técnica)  
 14. [Sobre el Autor y el Proyecto](#sobre-el-autor-y-el-proyecto)
 
 ---
 
-## 🧠 ¿Qué es ABU?
+## ¿Qué es ABU?
 
 **ABU** es un asistente virtual conversacional desarrollado en Python que utiliza **inteligencia artificial generativa (GPT-4 Turbo)** para brindar acompañamiento emocional, información útil, recordatorios y asistencia diaria.  
 Además, **incorpora LangChain** para mantener el contexto de la conversación y detectar situaciones críticas de forma dinámica.
@@ -47,7 +47,7 @@ Está diseñado especialmente para adultos mayores, pero puede adaptarse a cualq
 
 ---
 
-## ✨ Novedades en la versión 2
+## Novedades en la versión 2
 
 - Migración a **GPT-4 Turbo** para mejor rendimiento y personalización.  
 - Integración con **Google Cloud Text-to-Speech** para respuestas en voz natural.  
@@ -61,7 +61,7 @@ Está diseñado especialmente para adultos mayores, pero puede adaptarse a cualq
 
 ---
 
-## ⚙️ Funcionalidades principales
+## Funcionalidades principales
 
 - **Conversación empática:** respuestas personalizadas según perfil y estado emocional.  
 - **Lectura por voz:** síntesis de voz para respuestas.  
@@ -73,14 +73,14 @@ Está diseñado especialmente para adultos mayores, pero puede adaptarse a cualq
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Mejorar la calidad de vida de los usuarios mediante un asistente virtual que escucha, conversa y acompaña. El proyecto acerca la inteligencia artificial a personas con necesidades reales, especialmente adultos mayores.
 
 
 ---
 
-## 🧩 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 ABU-GENAI-V2/
@@ -171,7 +171,7 @@ OTHER_API_KEY=...
 
 ---
 
-## 🖼️ Diagrama de Arquitectura
+## Diagrama de Arquitectura
 
 > Arquitectura funcional y modular del asistente ABU.
 
@@ -223,20 +223,20 @@ Centraliza todo lo necesario para guardar, estructurar o exportar información:
 
 ---
 
-## ⚠️ Manejo de errores y logs
+## Manejo de errores y logs
 
 - El sistema captura errores comunes (fallas en conexión con APIs, errores en síntesis de voz, etc.) y muestra mensajes claros al usuario para mejorar la experiencia.  
 
 ---
 
-## 🔒 Seguridad y privacidad
+## Seguridad y privacidad
 
 - Las claves API y credenciales se almacenan localmente en archivos `.env` y `credentials/` que no se incluyen en el repositorio para proteger la información sensible.  
 - No se almacena información sensible del usuario de forma permanente sin consentimiento.  
 
 ---
 
-## 🚧 Futuras mejoras y roadmap
+## Futuras mejoras y roadmap
 
 | Mejora                        | Descripción                                              |
 | ----------------------------- | -------------------------------------------------------- |
@@ -250,7 +250,7 @@ Centraliza todo lo necesario para guardar, estructurar o exportar información:
 
 ---
 
-## 💬 Ejemplos de conversación y datos
+## Ejemplos de conversación y datos
 
 **💬 Simulación de interacción:**  
 
