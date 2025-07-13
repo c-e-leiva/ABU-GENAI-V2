@@ -5,6 +5,10 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-%23FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
+🎧 **Probá ABU en vivo:**  
+[![Probar ABU en Streamlit](https://img.shields.io/badge/Probar_ABU-Streamlit_App-%23FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://abu-genai-v2.streamlit.app)
+
+
 <p align="center">
   <img src="assets/img/logo.png" alt="ABU Logo" width="200"/>
 </p>
