@@ -139,7 +139,7 @@ ABU-GENAI-V2/
 ---
 
 
-## ✅ Requisitos previos
+## Requisitos previos
 
 - Python 3.10 o superior.  
 - Acceso a APIs: OpenAI GPT-4 Turbo, Google Cloud Text-to-Speech, Google Sheets, OpenWeather.  
@@ -147,7 +147,7 @@ ABU-GENAI-V2/
 
 ---
 
-## 🚀 Instalación y ejecución
+## Instalación y ejecución
 
 1. Clonar el repositorio.  
 2. Crear y activar un entorno virtual Python.  
