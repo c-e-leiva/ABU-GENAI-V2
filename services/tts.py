@@ -13,7 +13,7 @@ credentials = service_account.Credentials.from_service_account_info(
 
 # Crea un cliente autenticado para utilizar Google Text-to-Speech
 def crear_cliente_tts():
-    return texttospeech.TextToSpeechClient.from_service_account_file(credentials)
+    return texttospeech.TextToSpeechClient(credentials=credentials)
 
 # Convierte un texto en audio (formato MP3) utilizando la voz masculina en español de Argentina
 def sintetizar_texto(texto, cliente):

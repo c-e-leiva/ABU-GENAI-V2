@@ -7,13 +7,15 @@ from google.oauth2.service_account import Credentials
 from datetime import datetime
 from google.oauth2.service_account import Credentials
 import uuid
+import streamlit as st
+
 
 # Definición del alcance de acceso para Google Sheets y credenciales
 SCOPES = ["https://www.googleapis.com/auth/spreadsheets"]
 
 # Establece la conexión con Google Sheets usando las credenciales del proyecto
 def conectar_sheets():
-    creds = Credentials.from_service_account_file("gcp_sheets", scopes=SCOPES)
+    creds = Credentials.from_service_account_info(dict(st.secrets["gcp_sheets"]), scopes=SCOPES)
     client = gspread.authorize(creds)
     return client
 
