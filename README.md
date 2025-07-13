@@ -295,7 +295,7 @@ Centraliza todo lo necesario para guardar, estructurar o exportar información:
 
 ---
 
-## 👨‍💻 Sobre el Autor y el Proyecto
+## Sobre el Autor y el Proyecto
 
 ### 🧠 Identidad del proyecto  
 **ABU** es la sigla de *Asistente de Bienestar Único*.  
