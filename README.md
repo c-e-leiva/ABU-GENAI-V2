@@ -1,5 +1,7 @@
 # 🤖 ABU-GENAI-V2 – Asistente Conversacional con IA Generativa  
 > Evolución conversacional con GPT-4 Turbo, voz y acompañamiento emocional
+> 🔁 Este proyecto es una evolución del asistente [ABU-IA-Generativa (v1)](https://github.com/c-e-leiva/ABU-IA-Generativa)
+
 
 ![GPT-4 Turbo](https://img.shields.io/badge/GPT--4-Turbo-%237235c9?style=for-the-badge&logo=openai&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
