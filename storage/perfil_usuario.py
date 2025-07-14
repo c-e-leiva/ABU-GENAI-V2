@@ -51,6 +51,7 @@ def construir_recordatorios(session_state):
 def exportar_perfil_completo(session_state):
     return {
         "perfil": construir_perfil_usuario(session_state),
+        "preferencias": session_state.get("preferencias", {}),
         "emergencia": construir_datos_emergencia(session_state),
         "historial": construir_historial_conversacion(session_state),
         "recordatorios": construir_recordatorios(session_state)

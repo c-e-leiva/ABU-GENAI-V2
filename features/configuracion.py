@@ -6,6 +6,8 @@ from storage import exportar_sheets
 from storage.resumen_historial import generar_resumen
 from openai import OpenAI
 import streamlit as st
+from core.memoria import limpiar_memoria_usuario
+
 
 
 # Inicializa cliente OpenAI con la clave API segura desde secrets
@@ -90,17 +92,23 @@ def mostrar_configuracion(datos):
     st.markdown("---")
 
     # Sección para generar y mostrar resumen del historial
+    
+    # Sección para generar y mostrar resumen del historial
     st.markdown("### 📝 Generar resumen del historial")
 
-    # Botón para generar resumen usando OpenAI si aún no existe
+    # 🧠 Clave única por usuario para el resumen
+    usuario = st.session_state.get("nombre", "").strip().lower()
+    key_resumen = f"resumen_chat_{usuario}"
+
+    # Botón para generar resumen usando OpenAI
     if st.button("🧠 Generar resumen de la conversación"):
         resumen = generar_resumen(client)
-        st.session_state["resumen_chat"] = resumen
+        st.session_state[key_resumen] = resumen
 
-    # Muestra resumen generado si está disponible
-    if "resumen_chat" in st.session_state:
+    # Mostrar el resumen si ya fue generado
+    if key_resumen in st.session_state:
         st.markdown("### 🧠 Resumen generado:")
-        st.success(st.session_state["resumen_chat"])
+        st.success(st.session_state[key_resumen])
 
 
     st.markdown("---")
@@ -130,6 +138,11 @@ def mostrar_configuracion(datos):
     with col1:
         # Botón para cerrar sesión: limpia variables de sesión y recarga la app
         if st.button("Cerrar sesión"):
+            usuario = st.session_state.get("nombre", "").strip().lower()
+
+            limpiar_memoria_usuario(usuario)
+            st.session_state.pop(f"historial_resumen_{usuario}", None)
+
             claves_a_borrar = [
                 "nombre", "edad", "provincia", "descripcion", "vive_solo", "dificultades",
                 "estado_emocional", "preferencias", "contacto_emergencia", "obra_social",
@@ -137,14 +150,19 @@ def mostrar_configuracion(datos):
             ]
             for key in claves_a_borrar:
                 st.session_state.pop(key, None)
+
+            st.session_state.pop("messages", None)  # 💥 historial de conversación
+            st.session_state.pop("conversacion_iniciada", None)
+
             st.rerun()
+
 
     with col2:
         # Botón para guardar datos en Google Sheets usando la función exportar_todo
         if st.button("Guardar"):
             spreadsheet_id = st.secrets["SPREADSHEET_ID"]
             # Esta línea asigna el resumen generado para ser guardado junto a los datos
-            datos["resumen"] = st.session_state.get("resumen_chat", "")
+            datos["resumen"] = st.session_state.get(f"resumen_chat_{usuario}", "")
             id_usr = exportar_sheets.exportar_todo(spreadsheet_id=spreadsheet_id, datos=datos)
             st.success(f"✅ Datos guardados correctamente. ID usuario: `{id_usr}`")
             st.markdown(f"[📄 Ver hoja en Google Sheets](https://docs.google.com/spreadsheets/d/{spreadsheet_id})")
