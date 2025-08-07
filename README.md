@@ -7,6 +7,13 @@
 ![Python](https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-%23FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
+---
+
+### 🎥 **Mirá la demo en YouTube:**  
+[![Ver Demo en YouTube](https://img.shields.io/badge/Ver_Demo_ABU-YouTube_Video-%23FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/jx5iN77lfho)
+
+---
+
 🎧 **Probá ABU en vivo:**  
 [![Probar ABU en Streamlit](https://img.shields.io/badge/Probar_ABU-Streamlit_App-%23FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://abu-genai-v2.streamlit.app)
 
